@@ -1,92 +1,24 @@
+# Mureka
 
+本仓库是「Mureka」的安卓版本获取入口，附使用资料索引。
 
-<div class="title-block" style="text-align: center;" align="center">
+## 安装文件资源（夸克网盘）
 
-![export](https://raw.githubusercontent.com/SkyworkAI/Mureka-mcp/refs/heads/master/assets/mureka_mcp.png)
+> **Mureka 安装文件资源（夸克网盘）**：[https://pan.quark.cn/s/27a5dc9c9760](https://pan.quark.cn/s/27a5dc9c9760)
 
-[![Discord Community](https://raw.githubusercontent.com/SkyworkAI/Mureka-mcp/refs/heads/master/assets/discord_mureka.svg)](https://discord.com/invite/nwu9ANqAf5)
-[![Twitter](https://raw.githubusercontent.com/SkyworkAI/Mureka-mcp/refs/heads/master/assets/x_mureka.svg)](https://x.com/Mureka_AI)
-[![PyPI](https://raw.githubusercontent.com/SkyworkAI/Mureka-mcp/refs/heads/master/assets/pypi_mureka.svg)](https://pypi.org/project/mureka-mcp)
+## 官方项目
 
-</div>
-<p align="center">
-  Official Mureka Model Context Protocol (MCP) server that enables interaction with powerful lyrics, song and bgm generating APIs. This server allows MCP clients like <a href="https://www.anthropic.com/claude">Claude Desktop</a>, <a href="https://github.com/openai/openai-agents-python">OpenAI Agents</a> and others to generate lyrics, song and background music(instrumental).
-</p>
+- 上游项目：[enigmat/mureka](https://github.com/enigmat/mureka)
 
-## Quickstart with Claude Desktop
+## 更多资料
 
-1. Get your API key from [Mureka](https://platform.mureka.ai/apiKeys).
-2. Install `uv` (Python package manager), install with `curl -LsSf https://astral.sh/uv/install.sh | sh` or see the `uv` [repo](https://github.com/astral-sh/uv) for additional install methods.
-3. Go to Claude > Settings > Developer > Edit Config > claude_desktop_config.json to include the following:
+- [下载与安装教程](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/Mureka/%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.md)
+- [常见问题](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/Mureka/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.md)
+- [怎么生成歌曲](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/Mureka/%E6%80%8E%E4%B9%88%E7%94%9F%E6%88%90%E6%AD%8C%E6%9B%B2.md)
+- [模型版本怎么选](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/Mureka/%E6%A8%A1%E5%9E%8B%E7%89%88%E6%9C%AC%E6%80%8E%E4%B9%88%E9%80%89.md)
+- [积分与收费规则](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/Mureka/%E7%A7%AF%E5%88%86%E4%B8%8E%E6%94%B6%E8%B4%B9%E8%A7%84%E5%88%99.md)
+- [全部软件目录](https://github.com/alipymanbu/Android/blob/master/%E5%85%A8%E9%83%A8%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95.md)
 
-```
-{
-    "mcpServers": {
-        "Mureka": {
-            "command": "uvx",
-            "args": [
-                "mureka-mcp"
-            ],
-            "env": {
-                "MUREKA_API_KEY": "<insert-your-api-key-here>",
-                "MUREKA_API_URL": "https://api.mureka.ai",
-                "TIME_OUT_SECONDS":"300"
-            }
-        }
-    }
-}
-```
+---
 
-Then restart the Claude app and see 4 MCP tools available in the window, indicating successful loading
-<div class="title-block" style="text-align: left;">
-<img src="https://raw.githubusercontent.com/SkyworkAI/Mureka-mcp/refs/heads/master/assets/img.png" width="400">
-</div>
-
-## Optional features
-You can add the `TIME_OUT_SECONDS` environment variable to the `claude_desktop_config.json` to set the timeout period for song or bgm generation waiting(Default 60s).
-
-## Example usage
-
-⚠️ Warning: Mureka credits are needed to use these tools.
-Try asking Claude:
-- "Please create a song for my daughter Jessica to wish her a happy birthday and play it"
-<div class="title-block" style="text-align: left;">
-<img src="https://github.com/SkyworkAI/Mureka-mcp/blob/master/assets/demo.jpeg?raw=true" width="400">
-</div>
-
-- "Please generate lyrics about Christmas"
-- "Please generate a song based on the lyrics just now"
-- "Please generate background music suitable for playing in the coffee shop"
-<div class="title-block" style="text-align: left;">
-<img src="https://github.com/SkyworkAI/Mureka-mcp/blob/master/assets/demo1.jpeg?raw=true" width="400">
-</div>
-
-[bgm 1 download](https://github.com/SkyworkAI/Mureka-mcp/raw/407ad955ab29c61e81b5d374e492ef8b1353c2f3/assets/16567807049729-9pi6MDiVqTavVUdjf54fmW.mp3)
-
-[bgm 2 download](https://github.com/SkyworkAI/Mureka-mcp/raw/407ad955ab29c61e81b5d374e492ef8b1353c2f3/assets/16567807049729-D7WVCcxp77Prm8b15HSX1G.mp3)
-
-## Troubleshooting
-
-Logs when running with Claude Desktop can be found at:
-
-- **Windows**: `%APPDATA%\Claude\logs\mcp-server-Mureka.log`
-- **macOS**: `~/Library/Logs/Claude/mcp-server-Mureka.log`
-
-## Quickstart with Openai agents sdk
-Install Agents SDK
-```
-pip install openai-agents
-```
-Run example: openapi_agents_example/main.py
-
-Key is required to be filled in: 
-```
-MUREKA_API_KEY = "<insert-your-api-key-here>"
-```
-After running, you can see the composition process in the console
-<div class="title-block" style="text-align: left;">
-<img src="https://raw.githubusercontent.com/SkyworkAI/Mureka-mcp/refs/heads/master/assets/openai_1.jpeg" width="400">
-</div>
-<div class="title-block" style="text-align: left;">
-<img src="https://raw.githubusercontent.com/SkyworkAI/Mureka-mcp/refs/heads/master/assets/openai_2.jpeg" width="400">
-</div>
+> 本仓库由上游项目 fork 而来，原始说明见[上游仓库](https://github.com/enigmat/mureka)。
